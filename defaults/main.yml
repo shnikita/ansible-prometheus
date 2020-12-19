@@ -24,23 +24,23 @@ prometheus_snmp_exporter_config_dir: "{{ prometheus_config_dir }}/snmpexporter"
 prometheus_blackbox_exporter_config_dir: "{{ prometheus_config_dir }}/blackboxexporter"
 
 # Prometheus
-prometheus_version: '2.13.1'
+prometheus_version: '2.23.1'
 prometheus_platform_architecture: 'linux-amd64'
 
 # Node exporter
-prometheus_node_exporter_version: '0.18.1'
+prometheus_node_exporter_version: '1.0.1'
 
 # Alert manager
-prometheus_alert_manager_version: '0.18.0'
+prometheus_alert_manager_version: '0.21.0'
 
 # Pushgateway
-prometheus_push_gateway_version: '1.0.0'
+prometheus_push_gateway_version: '1.3.1'
 
 # SNMP exporter
-prometheus_snmp_exporter_version: '0.15.0'
+prometheus_snmp_exporter_version: '0.19.0'
 
 # Blackbox exporter
-prometheus_blackbox_exporter_version: '0.15.1'
+prometheus_blackbox_exporter_version: '0.18.0'
 
 # Prometheus
 # https://prometheus.io/docs/operating/configuration/
@@ -304,7 +304,7 @@ prometheus_collector_____enabled_collectors:
   - 'collector.uname'
   - 'collector.vmstat'
   - 'collector.xfs'
-  - 'collector.zfs'
+#  - 'collector.zfs'
 #  - 'collector.buddyinfo' # disabled by default
 #  - 'collector.conntrack' # disabled by default
 #  - 'collector.diskstats' # disabled by default
@@ -317,7 +317,7 @@ prometheus_collector_____enabled_collectors:
 #  - 'collector.meminfo_numa' # disabled by default
 #  - 'collector.mountstats' # disabled by default
 #  - 'collector.netclass' # disabled by default
-#  - 'collector.ntp' # disabled by default
+  - 'collector.ntp' # disabled by default
 #  - 'collector.ntp.server-is-local' # disabled by default
 #  - 'collector.perf' # disabled by default
 #  - 'collector.pressure' # disabled by default
